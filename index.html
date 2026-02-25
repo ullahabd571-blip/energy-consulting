@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Abdullah — Renewable Energy Consultant specializing in utility-scale solar PV system design, structural engineering, and performance optimization for EPC contractors, developers, and infrastructure investors."/>
+<meta name="keywords" content="utility-scale solar design, solar structural engineering, PV performance modeling, renewable energy consulting, solar PV consultant, EPC engineering support, PVsyst modeling, SAP2000 structural analysis"/>
+<title>Abdullah | Renewable Energy & Solar Engineering Consultant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+/* ================================================================
+   DESIGN SYSTEM — Luxury-Industrial Executive Consulting
+   ================================================================ */
+:root {
+  --ink:       #08131c;
+  --ink-mid:   #0e1f2d;
+  --ink-soft:  #162940;
+  --emerald:   #059669;
+  --emerald-lt:#10b981;
+  --sage:      #d1fae5;
+  --gold:      #c9a84c;
+  --gold-lt:   #e8c96a;
+  --slate:     #94afc0;
+  --cloud:     #f4f8fc;
+  --white:     #ffffff;
+  --rule:      rgba(148,175,192,.15);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  background:var(--ink);
+  color:var(--white);
+  font-family:'Outfit',sans-serif;
+  font-weight:300;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--ink)}
+::-webkit-scrollbar-thumb{background:var(--emerald);border-radius:2px}
+
+/* ── CURSOR DOT ── */
+.cursor-dot{
+  position:fixed;width:8px;height:8px;
+  background:var(--emerald);border-radius:50%;
+  pointer-events:none;z-index:99999;
+  transform:translate(-50%,-50%);
+  transition:transform .1s;
+}
+
+/* ── TYPOGRAPHY ── */
+.display{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+  line-height:1.0;
+  letter-spacing:-.01em;
+}
+.serif{font-family:'Cormorant Garamond',serif;}
+.label{
+  font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;
+  font-weight:600;color:var(--emerald);
+}
+.label-gold{
+  font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;
+  font-weight:600;color:var(--gold);
+}
+
+/* ── LAYOUT ── */
+.container{max-width:1200px;margin:0 auto;padding:0 5vw;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  padding:1.5rem 5vw;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background .4s,border .4s;
+}
+nav.scrolled{
+  background:rgba(8,19,28,.92);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--rule);
+}
+.nav-brand{
+  display:flex;align-items:center;gap:.9rem;
+}
+.nav-brand-mark{
+  width:34px;height:34px;border:2px solid var(--emerald);
+  border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-weight:700;
+  font-size:1.1rem;color:var(--emerald);
+}
+.nav-brand-name{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:1.1rem;letter-spacing:.04em;
+}
+.nav-brand-title{
+  font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--slate);margin-top:1px;
+}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{
+  font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--slate);text-decoration:none;transition:color .25s;
+}
+.nav-links a:hover{color:var(--white);}
+.nav-cta{
+  padding:.6rem 1.5rem;border:1px solid var(--emerald);
+  border-radius:2px;font-size:.8rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--emerald);text-decoration:none;
+  transition:all .25s;font-weight:500;
+}
+.nav-cta:hover{background:var(--emerald);color:var(--ink);}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding:10rem 5vw 8rem;
+  position:relative;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 90% 70% at 70% 40%, rgba(5,150,105,.09) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(201,168,76,.06) 0%, transparent 50%);
+}
+/* Engineering grid */
+.hero-grid-bg{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(var(--rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse 80% 80% at 60% 50%, black 0%, transparent 70%);
+}
+/* Right-side engineering schematic */
+.hero-schematic{
+  position:absolute;right:0;top:0;bottom:0;width:48%;
+  display:flex;align-items:center;justify-content:center;
+  opacity:.22;pointer-events:none;
+}
+
+.hero-content{position:relative;z-index:2;max-width:660px;}
+.hero-eyebrow{
+  display:flex;align-items:center;gap:1rem;
+  margin-bottom:2.5rem;
+  animation:slideIn .9s ease forwards;opacity:0;
+}
+.hero-eyebrow-line{
+  width:40px;height:1px;background:var(--emerald);
+}
+.hero-title{
+  font-size:clamp(2.8rem,5.5vw,5rem);
+  animation:slideIn .9s .1s ease forwards;opacity:0;
+}
+.hero-title em{color:var(--emerald);font-style:italic;}
+.hero-sub{
+  margin-top:1.8rem;font-size:1.05rem;color:var(--slate);
+  max-width:520px;line-height:1.8;
+  animation:slideIn .9s .2s ease forwards;opacity:0;
+}
+.hero-authority{
+  margin-top:1.5rem;
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+  animation:slideIn .9s .3s ease forwards;opacity:0;
+}
+.auth-tag{
+  font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold);padding:.35rem .8rem;
+  border:1px solid rgba(201,168,76,.3);border-radius:2px;
+}
+.auth-sep{width:4px;height:4px;background:var(--rule);border-radius:50%;}
+.hero-btns{
+  margin-top:3rem;display:flex;gap:1.2rem;flex-wrap:wrap;
+  animation:slideIn .9s .4s ease forwards;opacity:0;
+}
+.btn-primary{
+  padding:1rem 2.4rem;background:var(--emerald);color:var(--white);
+  border:none;border-radius:2px;font-family:'Outfit',sans-serif;
+  font-weight:500;font-size:.9rem;letter-spacing:.06em;
+  text-transform:uppercase;text-decoration:none;cursor:pointer;
+  transition:all .3s;display:inline-flex;align-items:center;gap:.6rem;
+}
+.btn-primary:hover{background:var(--emerald-lt);transform:translateY(-2px);box-shadow:0 16px 40px rgba(5,150,105,.3);}
+.btn-ghost{
+  padding:1rem 2.4rem;background:transparent;color:var(--white);
+  border:1px solid rgba(255,255,255,.2);border-radius:2px;
+  font-family:'Outfit',sans-serif;font-weight:500;font-size:.9rem;
+  letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
+  cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:.6rem;
+}
+.btn-ghost:hover{border-color:var(--emerald);color:var(--emerald);}
+.hero-metrics{
+  margin-top:5rem;
+  display:grid;grid-template-columns:repeat(3,auto);
+  gap:0;width:fit-content;
+  animation:slideIn .9s .55s ease forwards;opacity:0;
+}
+.h-metric{
+  padding:1.5rem 2.5rem;
+  border:1px solid var(--rule);
+  position:relative;
+}
+.h-metric:not(:last-child){border-right:none;}
+.h-metric-val{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.6rem;font-weight:600;color:var(--emerald);
+  line-height:1;
+}
+.h-metric-label{font-size:.72rem;color:var(--slate);margin-top:.4rem;letter-spacing:.06em;}
+
+@keyframes slideIn{
+  from{opacity:0;transform:translateY(24px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ── SECTION TRANSITIONS ── */
+.section-light{
+  background:var(--cloud);color:var(--ink);
+  padding:7rem 5vw;
+}
+.section-dark{background:var(--ink);padding:7rem 5vw;}
+.section-mid{background:var(--ink-mid);padding:7rem 5vw;}
+
+/* ── VALUE PROPOSITION ── */
+.vp-header{margin-bottom:5rem;}
+.vp-header h2{font-size:clamp(2rem,3.5vw,3rem);}
+.vp-header p{margin-top:1.2rem;max-width:600px;color:var(--slate);font-size:1.05rem;}
+
+.vp-pillars{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem;margin-top:4rem;}
+.vp-pillar{
+  padding:2.2rem 1.8rem;
+  background:var(--ink-soft);
+  border:1px solid var(--rule);
+  border-radius:3px;
+  position:relative;overflow:hidden;
+  transition:border-color .3s,transform .3s;
+}
+.vp-pillar::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--emerald),var(--emerald-lt));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .35s;
+}
+.vp-pillar:hover{border-color:rgba(5,150,105,.35);transform:translateY(-3px);}
+.vp-pillar:hover::after{transform:scaleX(1);}
+.vp-pillar-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;font-weight:700;
+  color:rgba(5,150,105,.15);line-height:1;
+  margin-bottom:1.2rem;
+}
+.vp-pillar h3{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;font-size:1.3rem;color:var(--white);
+  margin-bottom:.6rem;
+}
+.vp-pillar p{font-size:.85rem;color:var(--slate);line-height:1.7;}
+
+.outcomes-row{
+  display:flex;flex-wrap:wrap;gap:.8rem;margin-top:4rem;
+  padding-top:3rem;border-top:1px solid var(--rule);
+}
+.outcome-chip{
+  padding:.5rem 1.2rem;border-radius:100px;
+  background:rgba(5,150,105,.1);
+  border:1px solid rgba(5,150,105,.2);
+  font-size:.8rem;letter-spacing:.06em;color:var(--emerald-lt);
+  font-weight:500;
+}
+
+/* ── SERVICES ── */
+.services-intro{margin-bottom:4rem;}
+.services-intro h2{font-size:clamp(2rem,3.5vw,3rem);max-width:600px;}
+.services-intro p{margin-top:1.2rem;color:var(--slate);}
+
+.service-list{border-top:1px solid var(--rule);}
+.service-item{
+  display:grid;grid-template-columns:80px 1fr auto;
+  align-items:center;gap:2rem;
+  padding:2.2rem 0;
+  border-bottom:1px solid var(--rule);
+  transition:background .25s;cursor:default;
+  position:relative;
+}
+.service-item::before{
+  content:'';
+  position:absolute;left:0;right:0;top:0;bottom:0;
+  background:rgba(5,150,105,.03);
+  opacity:0;transition:opacity .25s;
+}
+.service-item:hover::before{opacity:1;}
+.service-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:600;
+  color:rgba(5,150,105,.25);line-height:1;
+}
+.service-body h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.35rem;font-weight:600;color:var(--white);
+  margin-bottom:.4rem;
+  transition:color .25s;
+}
+.service-item:hover .service-body h3{color:var(--emerald-lt);}
+.service-body p{font-size:.85rem;color:var(--slate);max-width:560px;line-height:1.7;}
+.service-arrow{
+  width:36px;height:36px;border:1px solid var(--rule);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:var(--slate);transition:all .3s;flex-shrink:0;
+}
+.service-item:hover .service-arrow{border-color:var(--emerald);color:var(--emerald);transform:rotate(45deg);}
+
+/* ── PROFILE ── */
+.profile-wrap{
+  display:grid;grid-template-columns:1fr 420px;
+  gap:6rem;align-items:center;
+}
+.profile-text .label{margin-bottom:1rem;}
+.profile-text h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:1.5rem;}
+.profile-text p{color:var(--slate);margin-bottom:1rem;font-size:1rem;}
+.profile-text p strong{color:var(--white);font-weight:500;}
+.profile-card{
+  background:var(--ink-soft);border:1px solid var(--rule);
+  border-radius:4px;padding:2.5rem;
+  position:relative;overflow:hidden;
+}
+.profile-card::before{
+  content:'';
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--emerald),var(--gold));
+}
+.profile-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.p-stat{padding:1.2rem;background:rgba(255,255,255,.03);border-radius:3px;}
+.p-stat-val{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:600;color:var(--emerald);
+  line-height:1;
+}
+.p-stat-label{font-size:.75rem;color:var(--slate);margin-top:.3rem;letter-spacing:.05em;}
+.profile-qual{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--rule);}
+.profile-qual p{font-size:.85rem;color:var(--slate);line-height:1.7;}
+.profile-qual strong{color:var(--white);font-weight:500;}
+
+/* ── PORTFOLIO ── */
+.portfolio-box{
+  border:1px solid var(--rule);border-radius:4px;
+  padding:4rem;text-align:center;
+  background:linear-gradient(135deg,var(--ink-soft) 0%,rgba(5,150,105,.05) 100%);
+  position:relative;overflow:hidden;
+  max-width:800px;margin:3rem auto 0;
+}
+.portfolio-box::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(5,150,105,.02) 40px,rgba(5,150,105,.02) 41px);
+}
+.portfolio-icon{
+  font-size:2.5rem;margin-bottom:1.5rem;
+  display:block;position:relative;z-index:1;
+}
+.portfolio-box h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;font-weight:600;position:relative;z-index:1;
+  margin-bottom:1rem;
+}
+.portfolio-box p{
+  color:var(--slate);font-size:.95rem;
+  max-width:520px;margin:0 auto;
+  position:relative;z-index:1;line-height:1.8;
+}
+.portfolio-box .btn-ghost{margin-top:2rem;position:relative;z-index:1;}
+
+/* ── TOOLS ── */
+.tools-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:1px;background:var(--rule);
+  border:1px solid var(--rule);border-radius:4px;
+  overflow:hidden;margin-top:3rem;
+}
+.tool-cell{
+  background:var(--ink);padding:2rem 1.8rem;
+  display:flex;align-items:center;gap:1.2rem;
+  transition:background .25s;
+}
+.tool-cell:hover{background:var(--ink-soft);}
+.tool-icon{
+  width:36px;height:36px;border-radius:6px;
+  background:rgba(5,150,105,.1);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.tool-name{font-weight:500;font-size:.9rem;}
+.tool-desc{font-size:.75rem;color:var(--slate);margin-top:.15rem;}
+
+.standards-row{
+  margin-top:3rem;padding:2rem 2.5rem;
+  border:1px solid var(--rule);border-radius:4px;
+  background:rgba(201,168,76,.04);
+  display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;
+}
+.standards-label{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.standards-items{display:flex;gap:1rem;flex-wrap:wrap;}
+.std-badge{
+  padding:.3rem .8rem;background:rgba(201,168,76,.08);
+  border:1px solid rgba(201,168,76,.2);border-radius:2px;
+  font-size:.78rem;color:var(--gold-lt);
+}
+
+/* ── IDEAL CLIENTS ── */
+.clients-header h2{font-size:clamp(2rem,3vw,2.8rem);max-width:500px;}
+.clients-header p{margin-top:1rem;color:var(--slate);}
+.clients-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:1.5rem;margin-top:4rem;
+}
+.client-card{
+  padding:2rem;border-radius:4px;
+  background:var(--white);
+  border:1px solid #e2ecf3;
+  transition:transform .25s,box-shadow .25s;
+}
+.client-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(8,19,28,.12);}
+.client-icon{
+  width:44px;height:44px;border-radius:8px;
+  background:rgba(5,150,105,.1);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;margin-bottom:1.2rem;
+}
+.client-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;
+}
+.client-card p{font-size:.83rem;color:#5a7a8f;line-height:1.7;}
+
+/* ── CTA ── */
+#cta{
+  padding:8rem 5vw;
+  background:linear-gradient(135deg,var(--ink) 0%,#081a2c 100%);
+  position:relative;overflow:hidden;
+  text-align:center;
+}
+#cta::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 100%,rgba(5,150,105,.12) 0%,transparent 60%),
+    radial-gradient(ellipse 40% 40% at 20% 30%,rgba(201,168,76,.05) 0%,transparent 50%);
+  pointer-events:none;
+}
+.cta-content{position:relative;z-index:1;}
+.cta-content h2{font-size:clamp(2.2rem,4.5vw,3.8rem);max-width:700px;margin:0 auto;}
+.cta-content h2 em{color:var(--emerald);font-style:italic;}
+.cta-sub{margin:1.5rem auto 3rem;max-width:500px;color:var(--slate);}
+
+.contact-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:1.2rem;max-width:900px;margin:0 auto 3rem;
+}
+.contact-card{
+  padding:1.8rem;border:1px solid var(--rule);border-radius:4px;
+  background:rgba(255,255,255,.03);
+  transition:border-color .25s,background .25s;
+  text-decoration:none;display:block;
+}
+.contact-card:hover{border-color:var(--emerald);background:rgba(5,150,105,.06);}
+.contact-type{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--emerald);margin-bottom:.5rem;}
+.contact-val{font-size:.95rem;color:var(--white);font-weight:400;}
+.contact-icon{font-size:1.3rem;margin-bottom:.8rem;display:block;}
+
+/* ── FOOTER ── */
+footer{
+  padding:2.5rem 5vw;
+  border-top:1px solid var(--rule);
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+  font-size:.78rem;color:var(--slate);
+}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1rem;color:var(--white);}
+.footer-note{color:rgba(148,175,192,.5);}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease;}
+.reveal.up{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:.1s;}
+.reveal-delay-2{transition-delay:.2s;}
+.reveal-delay-3{transition-delay:.3s;}
+.reveal-delay-4{transition-delay:.4s;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .profile-wrap{grid-template-columns:1fr;gap:3rem;}
+}
+@media(max-width:768px){
+  .grid-2,.grid-3{grid-template-columns:1fr;gap:2rem;}
+  .hero-metrics{grid-template-columns:1fr 1fr;width:100%;}
+  .h-metric:nth-child(3){border-top:none;border-right:1px solid var(--rule);}
+  .service-item{grid-template-columns:50px 1fr;gap:1rem;}
+  .service-arrow{display:none;}
+  .nav-links{display:none;}
+  .hero-authority{flex-direction:column;align-items:flex-start;}
+  .auth-sep{display:none;}
+  .contact-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:500px){
+  .hero-btns{flex-direction:column;}
+  .btn-primary,.btn-ghost{text-align:center;justify-content:center;}
+  .hero-metrics{grid-template-columns:1fr;}
+  .h-metric{border-right:1px solid var(--rule)!important;}
+  .contact-grid{grid-template-columns:1fr;}
+  .portfolio-box{padding:2.5rem 1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ════════════════════════════════ NAV ══ -->
+<nav id="mainNav">
+  <div class="nav-brand">
+    <div class="nav-brand-mark">A</div>
+    <div>
+      <div class="nav-brand-name">Abdullah</div>
+      <div class="nav-brand-title">Engineering Consultancy</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#value">Services</a></li>
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#tools">Capabilities</a></li>
+    <li><a href="#clients">Clients</a></li>
+  </ul>
+  <a href="#cta" class="nav-cta">Request Consultation</a>
+</nav>
+
+<!-- ════════════════════════════════ HERO ══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-bg"></div>
+
+  <!-- Engineering schematic SVG -->
+  <div class="hero-schematic">
+    <svg viewBox="0 0 500 600" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+      <!-- CAD-style solar farm layout -->
+      <rect x="30" y="30" width="440" height="540" stroke="#059669" stroke-width=".6" fill="none" stroke-dasharray="8 4"/>
+      <!-- Title block -->
+      <rect x="30" y="520" width="440" height="50" stroke="#059669" stroke-width=".6" fill="rgba(5,150,105,0.04)"/>
+      <line x1="150" y1="520" x2="150" y2="570" stroke="#059669" stroke-width=".6"/>
+      <line x1="300" y1="520" x2="300" y2="570" stroke="#059669" stroke-width=".6"/>
+      <text x="45" y="549" fill="#059669" font-size="8" font-family="monospace">PROJ: SOLAR PV LAYOUT</text>
+      <text x="165" y="549" fill="#059669" font-size="8" font-family="monospace">SCALE: 1:2000</text>
+      <text x="315" y="549" fill="#059669" font-size="8" font-family="monospace">REV: 03</text>
+      <!-- Solar panel rows — single axis tracker -->
+      <g stroke="#059669" stroke-width=".8" fill="rgba(5,150,105,0.06)">
+        <!-- Row 1 -->
+        <rect x="60" y="60" width="90" height="14"/>
+        <rect x="160" y="60" width="90" height="14"/>
+        <rect x="260" y="60" width="90" height="14"/>
+        <rect x="360" y="60" width="90" height="14"/>
+        <!-- Row 2 -->
+        <rect x="60" y="84" width="90" height="14"/>
+        <rect x="160" y="84" width="90" height="14"/>
+        <rect x="260" y="84" width="90" height="14"/>
+        <rect x="360" y="84" width="90" height="14"/>
+        <!-- Row 3 -->
+        <rect x="60" y="108" width="90" height="14"/>
+        <rect x="160" y="108" width="90" height="14"/>
+        <rect x="260" y="108" width="90" height="14"/>
+        <rect x="360" y="108" width="90" height="14"/>
+        <!-- Row 4 -->
+        <rect x="60" y="152" width="90" height="14"/>
+        <rect x="160" y="152" width="90" height="14"/>
+        <rect x="260" y="152" width="90" height="14"/>
+        <rect x="360" y="152" width="90" height="14"/>
+        <rect x="60" y="176" width="90" height="14"/>
+        <rect x="160" y="176" width="90" height="14"/>
+        <rect x="260" y="176" width="90" height="14"/>
+        <rect x="360" y="176" width="90" height="14"/>
+        <rect x="60" y="200" width="90" height="14"/>
+        <rect x="160" y="200" width="90" height="14"/>
+        <rect x="260" y="200" width="90" height="14"/>
+        <rect x="360" y="200" width="90" height="14"/>
+        <!-- Row 5 -->
+        <rect x="60" y="244" width="90" height="14"/>
+        <rect x="160" y="244" width="90" height="14"/>
+        <rect x="260" y="244" width="90" height="14"/>
+        <rect x="360" y="244" width="90" height="14"/>
+        <rect x="60" y="268" width="90" height="14"/>
+        <rect x="160" y="268" width="90" height="14"/>
+        <rect x="260" y="268" width="90" height="14"/>
+        <rect x="360" y="268" width="90" height="14"/>
+        <rect x="60" y="292" width="90" height="14"/>
+        <rect x="160" y="292" width="90" height="14"/>
+        <rect x="260" y="292" width="90" height="14"/>
+        <rect x="360" y="292" width="90" height="14"/>
+      </g>
+      <!-- Access roads -->
+      <line x1="30" y1="135" x2="450" y2="135" stroke="#c9a84c" stroke-width=".8" stroke-dasharray="6 3" opacity=".6"/>
+      <line x1="30" y1="227" x2="450" y2="227" stroke="#c9a84c" stroke-width=".8" stroke-dasharray="6 3" opacity=".6"/>
+      <line x1="30" y1="319" x2="450" y2="319" stroke="#c9a84c" stroke-width=".8" stroke-dasharray="6 3" opacity=".6"/>
+      <!-- Inverter stations -->
+      <rect x="200" y="340" width="40" height="30" stroke="#059669" stroke-width="1" fill="rgba(5,150,105,0.12)"/>
+      <text x="208" y="359" fill="#059669" font-size="6" font-family="monospace">INV</text>
+      <rect x="310" y="340" width="40" height="30" stroke="#059669" stroke-width="1" fill="rgba(5,150,105,0.12)"/>
+      <text x="318" y="359" fill="#059669" font-size="6" font-family="monospace">INV</text>
+      <!-- Substation -->
+      <rect x="185" y="390" width="130" height="70" stroke="#059669" stroke-width="1.2" fill="rgba(5,150,105,0.08)"/>
+      <text x="215" y="429" fill="#059669" font-size="9" font-family="monospace">SUBSTATION</text>
+      <!-- Connection lines -->
+      <line x1="220" y1="370" x2="220" y2="390" stroke="#059669" stroke-width=".8"/>
+      <line x1="330" y1="370" x2="330" y2="400" stroke="#059669" stroke-width=".8"/>
+      <line x1="330" y1="400" x2="315" y2="400" stroke="#059669" stroke-width=".8"/>
+      <!-- North arrow -->
+      <circle cx="440" cy="380" r="20" stroke="#059669" stroke-width=".8" fill="none"/>
+      <line x1="440" y1="365" x2="440" y2="395" stroke="#059669" stroke-width="1.2"/>
+      <polygon points="440,362 436,370 444,370" fill="#059669" opacity=".8"/>
+      <text x="437" y="400" fill="#059669" font-size="8" font-family="monospace">N</text>
+      <!-- Dimension lines -->
+      <line x1="30" y1="476" x2="450" y2="476" stroke="#c9a84c" stroke-width=".5" opacity=".4"/>
+      <line x1="30" y1="472" x2="30" y2="480" stroke="#c9a84c" stroke-width=".5" opacity=".4"/>
+      <line x1="450" y1="472" x2="450" y2="480" stroke="#c9a84c" stroke-width=".5" opacity=".4"/>
+      <text x="195" y="492" fill="#c9a84c" font-size="7" font-family="monospace" opacity=".6">1200 m</text>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span class="label">Renewable Energy Consultant</span>
+      </div>
+      <h1 class="display hero-title">
+        Designing the Future<br/>of <em>Energy Infrastructure</em>
+      </h1>
+      <p class="hero-sub">
+        Precision-engineered solar and structural solutions for developers, EPC contractors, and renewable energy investors worldwide.
+      </p>
+      <div class="hero-authority">
+        <span class="auth-tag">Utility-Scale Solar PV</span>
+        <div class="auth-sep"></div>
+        <span class="auth-tag">Structural Engineering</span>
+        <div class="auth-sep"></div>
+        <span class="auth-tag">Performance Optimization</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#cta" class="btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.67 3.45a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Request a Consultation
+        </a>
+        <a href="#value" class="btn-ghost">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          Explore Services
+        </a>
+      </div>
+      <div class="hero-metrics">
+        <div class="h-metric">
+          <div class="h-metric-val">4+</div>
+          <div class="h-metric-label">Years in renewable energy</div>
+        </div>
+        <div class="h-metric">
+          <div class="h-metric-val">150MW</div>
+          <div class="h-metric-label">Solar capacity delivered</div>
+        </div>
+        <div class="h-metric">
+          <div class="h-metric-val">MW/MWh</div>
+          <div class="h-metric-label">BESS system scale</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ VALUE PROPOSITION ══ -->
+<section id="value" class="section-mid">
+  <div class="container">
+    <div class="vp-header reveal">
+      <div class="label">Strategic Value</div>
+      <h2 class="display">An Engineering Partner,<br/>Not Just a Service Provider</h2>
+      <p>I bring deep technical expertise combined with a project-level perspective — helping developers and EPC contractors de-risk decisions, optimize performance, and deliver bankable results.</p>
+    </div>
+
+    <div class="vp-pillars">
+      <div class="vp-pillar reveal reveal-delay-1">
+        <div class="vp-pillar-num">01</div>
+        <h3>Strategic Solar Design</h3>
+        <p>Full-cycle utility-scale and commercial PV system design — from site constraints and yield modeling to electrical layout and interconnection documentation.</p>
+      </div>
+      <div class="vp-pillar reveal reveal-delay-2">
+        <div class="vp-pillar-num">02</div>
+        <h3>Structural Reliability</h3>
+        <p>Code-based structural analysis of mounting systems, tracker foundations, and civil infrastructure ensuring long-term asset integrity under wind and seismic loads.</p>
+      </div>
+      <div class="vp-pillar reveal reveal-delay-3">
+        <div class="vp-pillar-num">03</div>
+        <h3>Technical Execution</h3>
+        <p>A consultant who understands both the design office and the construction site — bridging engineering intent with field execution to eliminate costly rework.</p>
+      </div>
+      <div class="vp-pillar reveal reveal-delay-4">
+        <div class="vp-pillar-num">04</div>
+        <h3>Asset Performance Focus</h3>
+        <p>Every design decision is measured against long-term energy yield, O&amp;M accessibility, and lifecycle cost — delivering solutions that perform over 25-year asset horizons.</p>
+      </div>
+    </div>
+
+    <div class="outcomes-row reveal">
+      <span class="outcome-chip">Precision Engineering</span>
+      <span class="outcome-chip">Structural Reliability</span>
+      <span class="outcome-chip">Bankable Results</span>
+      <span class="outcome-chip">Risk Mitigation</span>
+      <span class="outcome-chip">Cost Optimization</span>
+      <span class="outcome-chip">Performance-Driven Solutions</span>
+      <span class="outcome-chip">IEC &amp; ASCE Compliant</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ SERVICES ══ -->
+<section id="services" class="section-dark">
+  <div class="container">
+    <div class="services-intro reveal">
+      <div class="label">Consulting Services</div>
+      <h2 class="display">End-to-End Engineering<br/>for Renewable Energy Assets</h2>
+      <p>Specialized consulting services engineered around measurable outcomes — not just deliverables.</p>
+    </div>
+    <div class="service-list">
+      <div class="service-item reveal">
+        <div class="service-num">01</div>
+        <div class="service-body">
+          <h3>Utility-Scale Solar PV System Design</h3>
+          <p>Comprehensive DC/AC system layout, string sizing, inverter selection, single-line diagrams, and design documentation for projects from 10MW to 500MW+.</p>
+        </div>
+        <div class="service-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </div>
+      <div class="service-item reveal">
+        <div class="service-num">02</div>
+        <div class="service-body">
+          <h3>PVsyst Energy Yield &amp; Sensitivity Modeling</h3>
+          <p>Bankable energy production reports, shading analysis, P50/P90 yield estimates, and sensitivity modeling for lenders, investors, and technical due diligence.</p>
+        </div>
+        <div class="service-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </div>
+      <div class="service-item reveal">
+        <div class="service-num">03</div>
+        <div class="service-body">
+          <h3>Solar Mounting Structure Engineering &amp; Wind Load Analysis</h3>
+          <p>Ground-mount and tracker foundation engineering, wind load calculations per ASCE 7 and IEC standards, and structural certification documentation.</p>
+        </div>
+        <div class="service-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </div>
+      <div class="service-item reveal">
+        <div class="service-num">04</div>
+        <div class="service-body">
+          <h3>Structural Modeling (SAP2000 / ANSYS)</h3>
+          <p>FEA-based structural analysis of steel frames, racking systems, and mechanical components — from material yield verification to fatigue and seismic analysis.</p>
+        </div>
+        <div class="service-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </div>
+      <div class="service-item reveal">
+        <div class="service-num">05</div>
+        <div class="service-body">
+          <h3>Battery Energy Storage System Layout Planning</h3>
+          <p>BESS sizing, layout optimization, integration with solar PV plants, grid-interconnection strategy, and system documentation for MW/MWh-scale storage.</p>
+        </div>
+        <div class="service-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </div>
+      <div class="service-item reveal">
+        <div class="service-num">06</div>
+        <div class="service-body">
+          <h3>Technical Design Review &amp; Optimization</h3>
+          <p>Independent technical review of contractor submittals, design packages, and procurement specifications — identifying risk, cost reduction, and performance opportunities.</p>
+        </div>
+        <div class="service-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </div>
+      <div class="service-item reveal">
+        <div class="service-num">07</div>
+        <div class="service-body">
+          <h3>EPC Design Support &amp; Documentation</h3>
+          <p>Technical deliverables, AutoCAD drawings, calculation packages, and construction-ready documentation packages for EPC contractors during engineering phases.</p>
+        </div>
+        <div class="service-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ PROFILE ══ -->
+<section id="profile" class="section-mid">
+  <div class="container">
+    <div class="profile-wrap">
+      <div class="profile-text reveal">
+        <div class="label">Professional Profile</div>
+        <h2 class="display">Built on Precision.<br/>Driven by Results.</h2>
+        <p>I am a <strong>Mechanical Engineer with 4+ years of hands-on experience</strong> in renewable energy infrastructure and structural analysis. My work spans the full technical lifecycle of large-scale solar projects — from early-stage design and simulation through to construction-phase engineering support.</p>
+        <p>I have operated within <strong>consultancy environments and large-scale energy programs</strong>, giving me direct exposure to utility-scale project delivery, multi-disciplinary coordination, and the rigorous standards demanded by developers, lenders, and international engineering codes.</p>
+        <p>My engineering background in <strong>structural modeling, energy simulation, and system design</strong> is matched by a clear commercial understanding of what bankable, fundable, and buildable solutions look like — ensuring clients receive not just technically sound work, but work that moves projects forward.</p>
+        <p>I engage as a <strong>trusted technical partner</strong> — responsive, thorough, and aligned with your project's success from kickoff to commissioning.</p>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="profile-card">
+          <div class="profile-stat-grid">
+            <div class="p-stat">
+              <div class="p-stat-val">4+</div>
+              <div class="p-stat-label">Years Experience</div>
+            </div>
+            <div class="p-stat">
+              <div class="p-stat-val">150MW</div>
+              <div class="p-stat-label">Solar Delivered</div>
+            </div>
+            <div class="p-stat">
+              <div class="p-stat-val">MW/MWh</div>
+              <div class="p-stat-label">BESS Scale</div>
+            </div>
+            <div class="p-stat">
+              <div class="p-stat-val">7+</div>
+              <div class="p-stat-label">Engineering Tools</div>
+            </div>
+          </div>
+          <div class="profile-qual">
+            <p>
+              <strong>Discipline:</strong> Mechanical Engineering<br/>
+              <strong>Specialization:</strong> Renewable Energy Infrastructure, Solar PV Systems, Structural Analysis<br/>
+              <strong>Standards:</strong> ASCE 7, IEC 61724, IEC 62466, international structural codes<br/>
+              <strong>Languages:</strong> Arabic (Native), English (Professional)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ PORTFOLIO ══ -->
+<section class="section-dark">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="label" style="text-align:center;">Project Portfolio</div>
+      <h2 class="display" style="font-size:clamp(2rem,3.5vw,3rem);">Previous Work &amp; Case Studies</h2>
+    </div>
+    <div class="portfolio-box reveal">
+      <span class="portfolio-icon">🔒</span>
+      <h3>Confidential by Design</h3>
+      <p>Due to professional confidentiality agreements with clients and employers, detailed project portfolios and technical documentation are available upon request. Please contact directly to review relevant work samples aligned with your project requirements.</p>
+      <a href="#cta" class="btn-ghost" style="margin-top:1.8rem;display:inline-flex;">Request Portfolio Access</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ TOOLS ══ -->
+<section id="tools" class="section-mid">
+  <div class="container">
+    <div class="reveal">
+      <div class="label">Technical Capabilities</div>
+      <h2 class="display">Industry-Standard Tools.<br/>Expert-Level Application.</h2>
+      <p style="margin-top:1rem;color:var(--slate);max-width:600px;">Every tool in this stack is applied at a professional level with real project experience — not just certification.</p>
+    </div>
+    <div class="tools-grid reveal">
+      <div class="tool-cell">
+        <div class="tool-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </div>
+        <div>
+          <div class="tool-name">PVsyst</div>
+          <div class="tool-desc">Energy yield &amp; simulation</div>
+        </div>
+      </div>
+      <div class="tool-cell">
+        <div class="tool-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div>
+          <div class="tool-name">AutoCAD 2D/3D</div>
+          <div class="tool-desc">Technical drawings &amp; layouts</div>
+        </div>
+      </div>
+      <div class="tool-cell">
+        <div class="tool-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </div>
+        <div>
+          <div class="tool-name">SAP2000</div>
+          <div class="tool-desc">Structural analysis &amp; modeling</div>
+        </div>
+      </div>
+      <div class="tool-cell">
+        <div class="tool-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="tool-name">ANSYS Workbench</div>
+          <div class="tool-desc">FEA simulation &amp; stress analysis</div>
+        </div>
+      </div>
+      <div class="tool-cell">
+        <div class="tool-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div>
+          <div class="tool-name">Primavera P6</div>
+          <div class="tool-desc">Project scheduling &amp; planning</div>
+        </div>
+      </div>
+      <div class="tool-cell">
+        <div class="tool-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div>
+          <div class="tool-name">Microsoft Office Suite</div>
+          <div class="tool-desc">Documentation &amp; reporting</div>
+        </div>
+      </div>
+    </div>
+    <div class="standards-row reveal">
+      <span class="standards-label">Standards &amp; Codes</span>
+      <div class="standards-items">
+        <span class="std-badge">ASCE 7</span>
+        <span class="std-badge">IEC 61724</span>
+        <span class="std-badge">IEC 62446</span>
+        <span class="std-badge">EN 1993 (Eurocode 3)</span>
+        <span class="std-badge">AISC 360</span>
+        <span class="std-badge">Wind Load Analysis</span>
+        <span class="std-badge">Seismic Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ IDEAL CLIENTS ══ -->
+<section id="clients" class="section-light">
+  <div class="container">
+    <div class="clients-header reveal">
+      <div class="label" style="color:var(--emerald)">Ideal Clients</div>
+      <h2 class="display" style="color:var(--ink)">Who I Work With</h2>
+      <p style="color:#5a7a8f">I partner with organizations where engineering excellence is a competitive advantage — not an afterthought.</p>
+    </div>
+    <div class="clients-grid">
+      <div class="client-card reveal reveal-delay-1">
+        <div class="client-icon">🏗️</div>
+        <h3>EPC Contractors</h3>
+        <p>Engineering, Procurement &amp; Construction firms requiring expert design support, calculation packages, and technical documentation during project execution phases.</p>
+      </div>
+      <div class="client-card reveal reveal-delay-2">
+        <div class="client-icon">⚡</div>
+        <h3>Renewable Energy Developers</h3>
+        <p>Developers advancing solar and storage projects through feasibility, permitting, and financial close who need bankable technical deliverables and independent engineering.</p>
+      </div>
+      <div class="client-card reveal reveal-delay-3">
+        <div class="client-icon">💼</div>
+        <h3>Infrastructure Investors</h3>
+        <p>Funds and asset managers requiring independent technical assessments, design reviews, and performance validation for acquisition, due diligence, or asset optimization.</p>
+      </div>
+      <div class="client-card reveal reveal-delay-1">
+        <div class="client-icon">📐</div>
+        <h3>Engineering Firms</h3>
+        <p>Consultancies and design firms seeking specialist subcontract support in solar PV design, structural analysis, or energy modeling for client projects.</p>
+      </div>
+      <div class="client-card reveal reveal-delay-2">
+        <div class="client-icon">🔋</div>
+        <h3>Solar Asset Owners</h3>
+        <p>Owners and operators of existing solar plants requiring design optimization, structural assessments, or performance analysis to maximize asset value and operational life.</p>
+      </div>
+      <div class="client-card reveal reveal-delay-3">
+        <div class="client-icon">🌍</div>
+        <h3>International Projects</h3>
+        <p>Organizations deploying renewable energy infrastructure in MENA, Africa, South Asia, or emerging markets requiring culturally and technically aligned engineering expertise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ CTA ══ -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-content reveal">
+      <div class="label" style="text-align:center;margin-bottom:1.5rem;">Start the Conversation</div>
+      <h2 class="display">
+        Let's Engineer <em>Performance</em> Into<br/>
+        Your Next Renewable Energy Asset
+      </h2>
+      <p class="cta-sub">Whether you're at the feasibility stage or deep in construction — I bring the technical depth and delivery experience to move your project forward with confidence.</p>
+
+      <div class="contact-grid">
+        <a href="mailto:abdullah@email.com" class="contact-card">
+          <span class="contact-icon">✉️</span>
+          <div class="contact-type">Email</div>
+          <div class="contact-val">abdullah@email.com</div>
+        </a>
+        <a href="https://wa.me/966500000000" target="_blank" class="contact-card">
+          <span class="contact-icon">💬</span>
+          <div class="contact-type">WhatsApp</div>
+          <div class="contact-val">+966 50 000 0000</div>
+        </a>
+        <a href="https://linkedin.com/in/abdullah" target="_blank" class="contact-card">
+          <span class="contact-icon">🔗</span>
+          <div class="contact-type">LinkedIn</div>
+          <div class="contact-val">View Professional Profile</div>
+        </a>
+        <a href="#" class="contact-card">
+          <span class="contact-icon">📅</span>
+          <div class="contact-type">Schedule a Call</div>
+          <div class="contact-val">Book a 30-min consultation</div>
+        </a>
+      </div>
+
+      <p style="color:var(--slate);font-size:.83rem;margin-top:1rem;">
+        Available for remote consulting and short-term on-site engagement globally. <br/>
+        <span style="color:rgba(148,175,192,.5);">Typical response time: within 24 hours.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════ FOOTER ══ -->
+<footer>
+  <div>
+    <div class="footer-brand">Abdullah — Renewable Energy Consultant</div>
+    <div style="font-size:.72rem;color:rgba(148,175,192,.5);margin-top:.3rem;">
+      Utility-Scale Solar PV · Structural Engineering · Performance Optimization
+    </div>
+  </div>
+  <div class="footer-note">
+    © 2025 · All rights reserved ·
+    <a href="mailto:abdullah@email.com" style="color:var(--emerald);text-decoration:none;">Contact</a>
+  </div>
+</footer>
+
+<script>
+// ── Cursor dot
+const dot = document.getElementById('cursorDot');
+if (window.matchMedia('(pointer:fine)').matches) {
+  document.addEventListener('mousemove', e => {
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+  });
+} else { dot.style.display = 'none'; }
+
+// ── Nav scroll state
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ── Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('up');
+      revealObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(el => revealObs.observe(el));
+</script>
+</body>
+</html>
